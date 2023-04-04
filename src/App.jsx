@@ -13,7 +13,18 @@ const App = () => {
     <div className='container'>
     <h1>{title.toUpperCase()}</h1>
     <p>{body}</p>
-    {Math.random() * 5 * 5}
+    <div className="comments">
+      <h3>comments ({comments.length})</h3>
+      <ul>
+        {comments.map((item, index) => {
+          return (
+            <>
+            <li key={item.id}>{item.text}</li>
+            </>
+          )
+        })}
+      </ul>
+    </div>
     </div>
   )
 }
