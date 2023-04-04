@@ -8,7 +8,11 @@ const App = () => {
     {id:2, text:'Comment two'},
     {id:3, text:'Comment three'},
     {id:4, text:'Comment four'}
-  ]
+  ];
+
+  const loading = true;
+
+  if(loading) return <h1>Loading...</h1>
   return (
     <div className='container'>
     <h1>{title.toUpperCase()}</h1>
@@ -16,11 +20,9 @@ const App = () => {
     <div className="comments">
       <h3>comments ({comments.length})</h3>
       <ul>
-        {comments.map((item, index) => {
+        {comments.map((item) => {
           return (
-            <>
             <li key={item.id}>{item.text}</li>
-            </>
           )
         })}
       </ul>
