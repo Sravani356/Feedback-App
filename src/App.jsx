@@ -19,7 +19,7 @@ const App = () => {
     <h1>{title.toUpperCase()}</h1>
     <p>{body}</p>
     {
-      showComments ? (
+      showComments && ( //we can replace ? with && to get rid of else part while rendering
     <div className="comments">
       <h3>comments ({comments.length})</h3>
       <ul>
